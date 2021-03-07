@@ -20,7 +20,7 @@ using Plots
 using LinearAlgebra
 
 # ╔═╡ 5ee0d060-73a2-11eb-03e9-f7fe823b3e04
-gr()
+plotly()
 
 # ╔═╡ 6204c870-746d-11eb-1cd5-4711637f1a8d
 md"""## Operações básicas"""
@@ -237,6 +237,9 @@ E(0.001, 10)
 # ╔═╡ eb6bd390-73b1-11eb-2deb-a5914ccc4d56
 E(1, [1,2], [1,1])
 
+# ╔═╡ 30027f22-7f85-11eb-327c-7f1e3371042f
+gr() # trocando o estilo das figuras
+
 # ╔═╡ 35e27dd0-73b6-11eb-3df2-51f4574b5c19
 function meshgrid(rangex, rangey=rangex)
 	xs = rangex
@@ -385,6 +388,7 @@ $pg(0)=g_0$
 # ╠═11d3acb0-73b2-11eb-1825-eba4787ad4bd
 # ╠═c6df7130-73b1-11eb-000a-ad78ba8d9d5b
 # ╠═eb6bd390-73b1-11eb-2deb-a5914ccc4d56
+# ╠═30027f22-7f85-11eb-327c-7f1e3371042f
 # ╠═35e27dd0-73b6-11eb-3df2-51f4574b5c19
 # ╠═e6330b90-73b2-11eb-33e0-bd50688a4ed2
 # ╠═70040360-73b8-11eb-0774-41dc546a68d1
