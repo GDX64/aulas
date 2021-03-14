@@ -179,6 +179,14 @@ md"""### Q)
 -  Ainda usando a função pol anterior, você consegue plotar somente a parte negativa da fnção?
 """
 
+# ╔═╡ 719ce450-84fa-11eb-1c45-09f6edfec173
+md"""
+### Q)
+- Voltando ao báskara: faça uma função $ \Delta(a, b, c) = \sqrt{b^2-4ac} $
+- Componha a função de báskara para a raíz do delta positivo $ r_p(a,b,c) = \frac{-b + \Delta(a,b,c)}{2a} $
+- Componha uma função para o delta negativo $ r_n = \frac{-b - \Delta}{2a} $
+"""
+
 # ╔═╡ c958d890-7454-11eb-01ee-c7decfe0979a
 md"""## Arrays e vetores
 Podemos criar vetores com a seguinte notação
@@ -363,7 +371,7 @@ $pg(0)=g_0$
 # ╠═33cac250-746f-11eb-0a63-ef3072f331b0
 # ╠═38caaa90-746f-11eb-0009-f13f4fe47bd2
 # ╟─440481b0-746f-11eb-1331-ed0e633841db
-# ╟─d07e0112-7470-11eb-2e7b-e798be8e8ce3
+# ╠═d07e0112-7470-11eb-2e7b-e798be8e8ce3
 # ╠═69c09f90-7471-11eb-31ae-5548765d9003
 # ╟─323b5970-7453-11eb-3d0c-253b24e71190
 # ╠═a64b4370-7453-11eb-0f1b-5d54415d2cd0
@@ -373,6 +381,7 @@ $pg(0)=g_0$
 # ╠═ec00e000-7453-11eb-0974-b1beb705abf7
 # ╠═7cc4a8b0-7454-11eb-0a41-459d5f3f8f46
 # ╟─c08456c2-7456-11eb-248d-0542862bc3b0
+# ╟─719ce450-84fa-11eb-1c45-09f6edfec173
 # ╟─c958d890-7454-11eb-01ee-c7decfe0979a
 # ╠═f4be4ffe-7454-11eb-0883-ed2b79023dee
 # ╟─ca2262c0-7457-11eb-3efd-53375fed7523
