@@ -4,12 +4,6 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 2db71ef0-8a4e-11eb-1bc8-591a53fbe81f
-using Pipe
-
-# ╔═╡ f238afbe-8abf-11eb-1cbd-7bbab92fff34
-using PlutoUI
-
 # ╔═╡ c5af7c70-8a49-11eb-17b3-5bad477f9fbd
 md"""
  # Sistemas numéricos Binários
@@ -187,7 +181,7 @@ md"""
 
 # ╔═╡ 6acba31e-8abb-11eb-1165-dfc797b503bc
 #Tudo são bits no final das contas
-textToBits(txt)= @pipe txt |> codeunits(_) |> map(bitstring, _) |> join(_, "")
+textToBits(txt) = txt |> codeunits |> x->map(bitstring, x) |> x->join(x, "")
 
 # ╔═╡ f48a4840-8abc-11eb-23e6-c7dfc5db1462
 helloEmBits=textToBits("Hello")
@@ -249,8 +243,6 @@ sameNumber(10, 10.0)
 #Há alguma string para a qual essa função retorna false? 
 
 # ╔═╡ Cell order:
-# ╠═2db71ef0-8a4e-11eb-1bc8-591a53fbe81f
-# ╠═f238afbe-8abf-11eb-1cbd-7bbab92fff34
 # ╟─c5af7c70-8a49-11eb-17b3-5bad477f9fbd
 # ╟─ac42043e-8a4b-11eb-1527-cf56d7bcfb33
 # ╠═e7e9bc00-8a4a-11eb-299d-bf69a6cbb431
