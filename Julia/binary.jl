@@ -68,6 +68,23 @@ toBits.(1:5)
 # ╔═╡ 2edef9f0-8a4a-11eb-1592-8d793e7e3a9c
 map((keyVal)->keyVal[1]=>keyVal[2], zip(1:5, toBits.(1:5)))
 
+# ╔═╡ abe261f2-8b65-11eb-14ac-0feb36c80a82
+md"""
+$110$
+$+1$
+$111$
+
+"""
+
+# ╔═╡ a942e270-8b66-11eb-3f3a-d5ee8293a540
+
+
+# ╔═╡ ad91ca30-8b66-11eb-2dfe-951648643ec6
+2^0*1 + 2^1*0 + 2^2*1 + 2^3*0 + 2^4*1
+
+# ╔═╡ f4c442c2-8b66-11eb-29e1-13970af307a0
+
+
 # ╔═╡ 2b8dd320-8a4a-11eb-00fd-7f35c39e5837
 md""" #### Q) Quais são as representações em binário dos números de 6 até 10?
 
@@ -251,6 +268,10 @@ sameNumber(10, 10.0)
 # ╠═32533920-8a4a-11eb-13fb-991509eedde1
 # ╠═5d717b20-8a5a-11eb-1203-c7f8a310977f
 # ╠═2edef9f0-8a4a-11eb-1592-8d793e7e3a9c
+# ╠═abe261f2-8b65-11eb-14ac-0feb36c80a82
+# ╠═a942e270-8b66-11eb-3f3a-d5ee8293a540
+# ╠═ad91ca30-8b66-11eb-2dfe-951648643ec6
+# ╠═f4c442c2-8b66-11eb-29e1-13970af307a0
 # ╟─2b8dd320-8a4a-11eb-00fd-7f35c39e5837
 # ╠═b2d0ba20-8a5c-11eb-2d17-13d3cd410c21
 # ╟─50915190-8a5b-11eb-3076-6378563a6dc0
