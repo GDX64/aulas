@@ -4,6 +4,27 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
+# ╔═╡ 3c7aaa30-95a0-11eb-0ef2-b90c889e11dd
+begin
+	let
+		env = mktempdir()
+		import Pkg
+		Pkg.activate(env)
+		Pkg.Registry.update()
+		Pkg.add(Pkg.PackageSpec(;name="PlutoUI", version="0.6.7-0.6"))
+	end
+	using PlutoUI
+end
+
 # ╔═╡ e4dd9b82-8b5d-11eb-3ac1-8dac53856c8f
 md"""
 # Controle de fluxo
@@ -161,7 +182,40 @@ muitoIf("paralelepípedo")
 # ╔═╡ 8723972e-8b60-11eb-31ea-b98c1cb1d5d4
 #Faça uma função que verifique se quatro varinhas, a, b, c e d formam um quadrado, um retângulo ou nenhum dos dois
 
+# ╔═╡ ae39d850-959e-11eb-166f-5d7b7f779925
+md"""
+### Ternários
+"""
+
+# ╔═╡ ca55bcc0-959e-11eb-2c03-016558d30c43
+@bind condição CheckBox()
+
+# ╔═╡ b88c0e90-959e-11eb-041c-d78147810726
+condição ? "marcado" : "desmarcado"
+
+# ╔═╡ d7ce2750-95a0-11eb-2831-b377b463e893
+true ? "marcado" : "desmarcado"
+
+# ╔═╡ ef848ec0-95a0-11eb-213c-81f9e43a0d21
+false ? "marcado" : "desmarcado"
+
+# ╔═╡ 21013fee-95a3-11eb-3e7f-fda11417a224
+id(x)=x
+
+# ╔═╡ 3939cfb0-95a3-11eb-363f-ab016d26cca2
+quadrado(x)=x^2-20
+
+# ╔═╡ 1e6411c0-95a1-11eb-3008-ebff83373c35
+@bind x Slider(0:0.05:10)
+
+# ╔═╡ 3b1642c0-95a1-11eb-355d-ff7bc90fc1ce
+x>5 ? "acima da média" : "abaixo da média"
+
+# ╔═╡ e034d9de-95a3-11eb-0658-5b7a955de0c3
+x>5 ? quadrado(x) : id(x)
+
 # ╔═╡ Cell order:
+# ╠═3c7aaa30-95a0-11eb-0ef2-b90c889e11dd
 # ╠═e4dd9b82-8b5d-11eb-3ac1-8dac53856c8f
 # ╠═02068320-8b5e-11eb-0b4f-89dc3916c2b3
 # ╠═3bf34f00-8b5e-11eb-0568-9187b8cd7a6b
@@ -194,3 +248,13 @@ muitoIf("paralelepípedo")
 # ╠═215bd5c0-8b60-11eb-0af9-932848c10a0d
 # ╠═4a9c4a50-8b60-11eb-15e5-470f4c50b858
 # ╠═8723972e-8b60-11eb-31ea-b98c1cb1d5d4
+# ╟─ae39d850-959e-11eb-166f-5d7b7f779925
+# ╠═ca55bcc0-959e-11eb-2c03-016558d30c43
+# ╠═b88c0e90-959e-11eb-041c-d78147810726
+# ╠═d7ce2750-95a0-11eb-2831-b377b463e893
+# ╠═ef848ec0-95a0-11eb-213c-81f9e43a0d21
+# ╠═21013fee-95a3-11eb-3e7f-fda11417a224
+# ╠═3939cfb0-95a3-11eb-363f-ab016d26cca2
+# ╠═1e6411c0-95a1-11eb-3008-ebff83373c35
+# ╠═3b1642c0-95a1-11eb-355d-ff7bc90fc1ce
+# ╠═e034d9de-95a3-11eb-0658-5b7a955de0c3
