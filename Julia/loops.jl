@@ -138,10 +138,7 @@ end
 contaLetraA("Paraguai")
 
 # ╔═╡ d9be8c00-95a8-11eb-0778-9712e6eb4abe
-
-
-# ╔═╡ 035efae0-95a9-11eb-0dcf-b3c304d08739
-
+#Faça uma função que conta o número de vogais em uma palavra
 
 # ╔═╡ 7fd02090-95a9-11eb-189b-c981735dc010
 function aPorAlpha(palavra)
@@ -160,10 +157,24 @@ end
 aPorAlpha("Paraguai")
 
 # ╔═╡ 23ae0c40-95aa-11eb-39ed-a7895cb74f30
-
+#Faça uma função que troca b por β, o por θ e g por γ
 
 # ╔═╡ 52f307d2-95aa-11eb-13a1-f74794396d02
+function temPar(lista)
+	for x in lista
+		if(x % 2 == 0) return true end
+	end
+	return false
+end
 
+# ╔═╡ 6d40f5a0-9be2-11eb-33d1-adc57532a1ef
+temPar([1,3,5,7])
+
+# ╔═╡ 75f8679e-9be2-11eb-2425-5bff7f700065
+temPar([1,4,5,6,9])
+
+# ╔═╡ 8549c2d0-9be2-11eb-1e84-bb25df0e1d83
+#Faça uma função que conta a quantidade de números pares em uma lista
 
 # ╔═╡ Cell order:
 # ╠═a5cbbd9e-9599-11eb-0636-99711afa6af7
@@ -187,8 +198,10 @@ aPorAlpha("Paraguai")
 # ╠═ba29c9ee-95a7-11eb-046a-e1bea0c652bc
 # ╠═2caaaf80-95a8-11eb-2a3c-f1d7f1ebb987
 # ╠═d9be8c00-95a8-11eb-0778-9712e6eb4abe
-# ╠═035efae0-95a9-11eb-0dcf-b3c304d08739
 # ╠═7fd02090-95a9-11eb-189b-c981735dc010
 # ╠═0e54ceae-95aa-11eb-0b57-ff9d214521c8
 # ╠═23ae0c40-95aa-11eb-39ed-a7895cb74f30
 # ╠═52f307d2-95aa-11eb-13a1-f74794396d02
+# ╠═6d40f5a0-9be2-11eb-33d1-adc57532a1ef
+# ╠═75f8679e-9be2-11eb-2425-5bff7f700065
+# ╠═8549c2d0-9be2-11eb-1e84-bb25df0e1d83
